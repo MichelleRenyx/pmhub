@@ -79,6 +79,7 @@
                 <scope>import</scope>
             </dependency>
 
+
             <!-- SpringCloud Alibaba 微服务 -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
@@ -365,20 +366,19 @@
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
     </dependencies>
-
-
-
-
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <source>1.8</source>  <!-- 指定 Java 源代码版本 -->
+                    <target>1.8</target>  <!-- 指定编译后的字节码版本 -->
+                    <encoding>UTF-8</encoding>  <!-- 指定源代码编码方式 -->
+<!--                    <source>${java.version}</source>-->
+<!--                    <target>${java.version}</target>-->
+<!--                    <encoding>${project.build.sourceEncoding}</encoding>-->
                 </configuration>
             </plugin>
         </plugins>
